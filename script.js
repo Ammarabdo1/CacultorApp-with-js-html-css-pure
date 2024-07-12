@@ -49,7 +49,7 @@ const calculateBill = () => {
   const perPerson = total / Number(numberOfPeopleDiv.innerText);
   // console.log(perPersonTotal)
   // update the perPersonTotal on DOM & show it to user
-  perPersonTotal.innerText = perPerson;
+  perPersonTotal.innerText = perPerson.toFixed(2);
 };
 
 // ** Splits the bill between more people **
@@ -61,8 +61,8 @@ const increasePeople = () => {
   // update the DOM with the new number of people
 
   // calculate the bill based on the new number of people
-  perPersonTotal.innerText *=
-    (Number(numberOfPeopleDiv.innerText) - 1) / numberOfPeopleDiv.innerText;
+  let result = perPersonTotal.innerText *(Number(numberOfPeopleDiv.innerText) - 1) / numberOfPeopleDiv.innerText;
+  perPersonTotal.innerText = result.toFixed(2)
 };
 
 // ** Splits the bill between fewer people **
@@ -81,7 +81,7 @@ const decreasePeople = () => {
     // update the DOM with the new number of people
 
     // calculate the bill based on the new number of people
-    perPersonTotal.innerText *=
-      (Number(numberOfPeopleDiv.innerText) + 1) / numberOfPeopleDiv.innerText;
+    let result = perPersonTotal.innerText *(Number(numberOfPeopleDiv.innerText) + 1) / numberOfPeopleDiv.innerText;
+    perPersonTotal.innerText = result.toFixed(2)
   }
 };
