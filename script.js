@@ -61,8 +61,7 @@ const increasePeople = () => {
   // update the DOM with the new number of people
 
   // calculate the bill based on the new number of people
-  let result = perPersonTotal.innerText *(Number(numberOfPeopleDiv.innerText) - 1) / numberOfPeopleDiv.innerText;
-  perPersonTotal.innerText = result.toFixed(2)
+  calculateBill()
 };
 
 // ** Splits the bill between fewer people **
@@ -81,7 +80,9 @@ const decreasePeople = () => {
     // update the DOM with the new number of people
 
     // calculate the bill based on the new number of people
-    let result = perPersonTotal.innerText *(Number(numberOfPeopleDiv.innerText) + 1) / numberOfPeopleDiv.innerText;
-    perPersonTotal.innerText = result.toFixed(2)
+    calculateBill()
   }
 };
+
+//? variables && loops && conditions && methods data types 
+
